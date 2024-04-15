@@ -1,0 +1,66 @@
+<!--Richard James-->
+<!--rijames@ucsc.edu-->
+
+<!--Notes to grader: I wasn't sure how to show parts 1 and 2 when later parts overrode them-->
+<!--For part 1, I guess look at the files and see how they match the DrawRectangle files?-->
+<!--For part 2, I commented out the drawVector() function in main-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Draw a blue rectangle (canvas version)</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="cnv1" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <script src="asg0.js"></script>
+    <script src="../lib/cuon-matrix-cse160.js"></script>
+
+    <br></br>
+    <label for="xVal">V1 X:</label>
+    <input type="text" id="xVal" required>
+    
+    <label for="yVal">V1 Y:</label>
+    <input type="text" id="yVal" required>
+
+    <br></br>
+
+    <label for="xVal">V2 X:</label>
+    <input type="text" id="xVal2" required>
+
+    <label for="yVal">V2 Y:</label>
+    <input type="text" id="yVal2" required>
+
+    <input type="button" value="Draw" onclick=handleDrawEvent()></input>
+
+
+    <br></br>
+    <label for="selection">Operation</label>
+
+      <select name="ops" id="selector">
+        <option value="">--Please choose an option--</option>
+        <option value="add">Add</option>
+        <option value="sub">Subtract</option>
+        <option value="mul">Multiply</option>
+        <option value="div">Divide</option>
+        <option value="mag">Magnitude</option>
+        <option value="norm">Normalize</option>
+        <option value="ang">Angle Between</option>
+        <option value="area">Area</option>
+
+
+      </select>
+
+    <br></br>
+
+    <label for="scalar">Scalar:</label>
+    <input type="text" id="scalar">
+
+    <input type="button" value="Draw" onclick=handleDrawOperationEvent()></input>
+
+
+  </body>
+</html>
